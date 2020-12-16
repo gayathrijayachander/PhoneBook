@@ -1,0 +1,39 @@
+<div class="content" role="main">
+  <div class="card">
+    <div class="form-group">
+      <input type="email" class="form-control" id="search-text" aria-describedby="search-text" [(ngModel)]="searchText"
+        placeholder="Enter text to search" autofocus>
+    </div>
+    <ul class="list-group" *ngFor="let data of phoneBookData">
+      <div *ngIf="data.firstName.toLowerCase().includes(searchText.toLowerCase())
+        && searchText.length != 0 ">
+        <li id="list" class="list-group-item">
+          <p class="name">{{data.firstName}} {{data.lastName}}</p>
+          <p class="mobile"><span class="glyphicon glyphicon-earphone"></span> {{data.mobile}}</p>
+          <button type="button" class="btn btn-default btn-sm" id="trash">
+            <span class="glyphicon glyphicon-trash"></span>
+          </button>
+        </li>
+      </div>
+      <div *ngIf="data.lastName.toLowerCase().includes(searchText.toLowerCase())
+        && searchText.length != 0 ">
+        <li id="list" class="list-group-item">
+          <p class="name">{{data.firstName}} {{data.lastName}}</p>
+          <p class="mobile"><span class="glyphicon glyphicon-earphone"></span> {{data.mobile}}</p>
+          <button type="button" class="btn btn-default btn-sm" id="trash">
+            <span class="glyphicon glyphicon-trash"></span>
+          </button>
+        </li>
+      </div>
+      <div *ngIf="searchText.length == 0">
+        <li id="list" class="list-group-item">
+          <p class="name">{{data.firstName}} {{data.lastName}}</p>
+          <p class="mobile"><span class="glyphicon glyphicon-earphone"></span> {{data.mobile}}</p>
+          <button type="button" class="btn btn-default btn-sm" id="trash">
+            <span class="glyphicon glyphicon-trash"></span>
+          </button>
+        </li>
+      </div>
+    </ul>
+  </div>
+</div>

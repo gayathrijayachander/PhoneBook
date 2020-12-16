@@ -1,0 +1,24 @@
+<div>
+    <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#myModal">+ Add Contact</button>
+  </div>
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">New contact</h4>
+        </div>
+        <div class="modal-body">
+         <input type="text" placeholder="First name" id="firstName" (keyup)="f_name($event)"/><br>
+         <input type="text" placeholder="Last name" id="lastName" (keyup)="l_name($event)"/><br>
+         <input type="text" placeholder="contact number" id="mobile" (keyup)="mobileNo($event)"/>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="add()">Create</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>

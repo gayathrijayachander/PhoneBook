@@ -1,0 +1,15 @@
+.name{
+    font-weight: bold;
+}
+#trash{
+    position: absolute;
+right: 10px;
+top: 15px;
+color: red;
+}
+#list{
+    position: relative;
+}
+.mobile{
+    color: darkslategray;
+}
